@@ -1,14 +1,12 @@
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Footer from "./footer";
+import Nav from "./login";
 
-export default function Layout ({children}) {
+export default function Layout({ children }) {
   return (
-    <>
-      <Header/>
-      <main>
-        {children}
-      </main>
-      <Footer/>
-    </>
-  )
+    <div>
+      <Nav />
+      {children}
+      <Footer />
+    </div>
+  );
 }
