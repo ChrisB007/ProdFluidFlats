@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function PlacesBlock({ img, location, distance, total }) {
-  console.log(total);
   return (
     <div className="flex items-center justify-center mt-6 mb-32 cursor-pointer hover:scale-105 transition-transform duration-300 ease-out">
       <li className="list-none px-3" key={img}>
