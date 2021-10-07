@@ -41,7 +41,7 @@ function Signin() {
                           type="email"
                           placeholder="Your email"
                           value=""
-                          onChange={(e) => setEmail(e.target.value)}
+                          onChange={(e) => setEmail(e?.target?.value)}
                         />
                       </div>
                     </div>
