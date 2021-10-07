@@ -11,10 +11,7 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/router";
-import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/client";
-import styles from "./header.module.css";
-import Login from "./login";
+import Header from "./header";
 
 const user = {
   name: "Chelsea Hagon",
@@ -95,7 +92,7 @@ export default function Navbar() {
             <div className="max-w-5xl  mx-auto px-4 sm:px-6 lg:px-8">
               <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
                 {/* Left Column - Logo */}
-                <div className="first-col  w-4/12 flex md:absolute md:w-full lg:w-full xl:w-full 2xl:w-full md:left-0 md:inset-y-0 lg:static xl:col-span-2">
+                <div className="first-col w-4/12 flex md:relative md:w-full lg:w-full xl:w-full 2xl:w-full md:left-0 md:inset-y-0 lg:static xl:col-span-2">
                   <div className="flex lg:flex lg:items-center justify-start item-center lg:w-0 lg:flex-1">
                     <a href={session ? "/dashboard" : "/"}>
                       <span className="sr-only">fluidFlats</span>
@@ -109,16 +106,16 @@ export default function Navbar() {
 
                 {/* Middle column - Search */}
                 <div className="min-w-0 flex-1 md:px-8 lg:px-0 xl:col-span-6">
-                  <div className="flex items-center px-6 py-4 md:max-w-3xl md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
+                  <div className="search-parent flex justify-center items-center px-6 py-4 md:w-9/12 md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
                     <div className="search-div w-9/12 flex justify-center m-auto relative">
                       <label htmlFor="search" className="sr-only">
                         Search
                       </label>
-                      <div className="relative flex item-center justify-center">
+                      <div className="search-input m-auto relative flex item-center justify-end">
                         <input
                           id="search"
                           name="search"
-                          className="search-box block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
+                          className="search-box m-auto block w-11/12 md:w-9/12 bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
                           placeholder="Search rental"
                           type="search"
                           value={searchInput}
@@ -212,7 +209,7 @@ export default function Navbar() {
                   </Menu>
 
                   <span className="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-                    <Login />
+                    <Header />
                   </span>
                 </div>
               </div>

@@ -9,6 +9,7 @@
     width: 200px;
 }
 
+
 p.signIn-paragraph {
     width: 118px;
     height: 35px;
@@ -36,12 +37,6 @@ p.signIn-paragraph {
 
 
 @media screen and (max-width: 768px) and (min-width: 1024px) {
-    .search-div {
-        width: 75% !important;
-        display: flex !important;
-        justify-content: center !important;
-        margin: auto !important;
-    }
-
+    
 
   }
