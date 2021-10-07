@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { GoogleLoginButton } from "react-social-login-buttons";
 import { useRouter } from "next/router";
+import { useSession } from "next-auth/client";
 
 function Signin() {
   const [authorized, setAuthorized] = useState();
+  const [loading] = useSession;
   const router = useRouter();
 
   return (
